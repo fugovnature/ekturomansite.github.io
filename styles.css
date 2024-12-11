@@ -1,0 +1,204 @@
+body {
+    padding: 100px;
+    background-color: #FFFFE0;
+    font-family: Arial, sans-serif;
+}
+
+.rounded-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rounded-img:hover {
+    transform: rotate(20deg) scale(1.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+th {
+    background-color: #e6e6e6;
+}
+
+th:hover {
+    background-color: #ccc;
+}
+
+.image {
+    float: right;
+    margin-left: 15px;
+    width: 150px;
+    height: auto;
+}
+
+.text-with-image p {
+    text-align: justify;
+}
+
+.styled-text {
+    border: 1px solid black;
+    padding: 2cm 1cm 2cm 3cm;
+    background-color: lightgray;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14pt;
+    text-indent: 1.5cm;
+}
+
+.dropcap {
+    font-size: 18pt;
+    margin-right: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.emperors {
+    display: flex;
+}
+
+.image1 {
+    margin-right: 20px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th {
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.styled-table td:first-child {
+    text-align: left;
+}
+
+.styled-table td:nth-child(even) {
+    background-color: #E0FFFF;
+}
+
+.styled-table td:nth-child(odd) {
+    background-color: white;
+}
+
+#feedback-link {
+    color: red;
+}
+
+#feedback-link:hover {
+    text-decoration: underline;
+}
+
+.image1 img {
+    border: 2px solid #ccc;
+    transition: transform 0.3s;
+}
+
+.image1 img:hover {
+    transform: scale(1.05);
+}
+
+.rounded-img {
+    border-radius: 25px;
+}
+
+.active-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.active-link:active {
+    color: red;
+    text-decoration: underline;
+}
+
+.hover-link {
+    color: green;
+    text-decoration: none;
+}
+
+.hover-link:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.floating-image {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
+}
+
+ul li {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#buildings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#buildings-table th, #buildings-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#buildings-table th {
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+#building-search {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#roman-culture-slider .owl-carousel .item img {
+    width: 100%; /* Изображение будет занимать всю ширину родителя */
+    height: 250px; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Изображение обрезается, чтобы заполнить контейнер */
+    border-radius: 5px; /* Слегка закругленные углы (опционально) */
+    border: 2px solid #ddd; /* Тонкая рамка вокруг изображений (опционально) */
+}
+
+#roman-culture-slider .owl-carousel .item p {
+    text-align: center; /* Центрирование текста под изображением */
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}

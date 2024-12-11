@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Римская империя в начале первого века</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+</head>
+<body>
+    <div id="app">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQtN1XguDkIN33kjL5bBNIAUGVFImOMRESqg&s" alt="Floating Image" width="15" height="15" class="floating-image">
+    <hr>
+    <center><h1 id="main-title">Быстрый доступ</h1>
+    <nav>
+        <ul>
+            <li><a href="#political-structure">Политическая структура</a></li> 
+            <li><a href="#economy">Экономика и общество</a></li>
+            <li><a href="#culture">Культура и религия</a></li>
+            <li><a href="#law">Система права</a></li>
+            <li><a href="#classes">Экономические и социальные классы</a></li>
+            <li><a href="#emperors">Основные римские императоры</a></li>
+            <li><a href="#army">Устройство римской армии</a></li>
+        </ul>
+    </nav>
+    </center>
+
+    <!-- Кнопка для изменения фона -->
+    <button @click="changeBackground">Изменить фон</button>
+    <button @click="showRandomQuote">Показать случайную цитату</button>
+    <div id="quote-display">{{ currentQuote }}</div>
+
+    <!-- Кнопка для добавления нового раздела -->
+    <button id="add-section-btn">Добавить раздел об архитектуре</button>
+    
+    <header>
+    <hr>
+        <h1 id="header-title">Римская империя в начале первого века</h1>
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiU-mAB7IdvUrw2rGhhCUwAk3_IP1N_e-FvA&s" 
+         alt="Рим" width="350" height="350" class="rounded-img">
+    </header>
+    
+    <section>
+        <dl>
+            <dt><b>Римский мир</b></dt>
+            <dd>
+                <p><strong>Римский мир</strong> (или <strong>римская цивилизация</strong>) относится к обширной культурной, политической и социальной структуре, которая была создана и управлялась <strong>Римской империей</strong> и её предшественниками.</p>
+            </dd>
+        </dl>
+    </section>
+
+    <hr>
+
+    <section id="political-structure">
+        <h2>Политическая структура</h2>
+        <p>Римская империя была одной из самых могущественных цивилизаций в мире. В начале первого века империя находилась под управлением императора, который обладал высшей властью. Император Октавиан Август был первым римским императором, который реорганизовал римское государство, преобразовав его из республики в империю.</p>
+        <p>Империя была разделена на провинции, каждая из которых управлялась назначенными правителями. Этим правителям были предоставлены значительные полномочия, но они подчинялись воле императора.</p>
+    </section>
+
+    <hr>
+
+    <section id="economy">
+        <h2>Экономика и общество</h2>
+        <div class="text-with-image"> 
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/931568/pub_61c756c28ccc0e69ce3f97d1_61c7858795db9f294a54f989/scale_1200" alt="Roman Public" class="image">
+            <p>Экономика Римской империи базировалась на сельском хозяйстве, торговле и ремеслах. В империи были развиты системы дорог, которые способствовали торговле и быстрому перемещению легионов. Монеты денарии использовались как основная валюта и играли ключевую роль в экономической стабильности.</p>
+            <p>Общество было строго стратифицировано, с четким разделением между патрициями и плебеями. Также существовало значительное количество рабов, которые выполняли различные работы, от сельского хозяйства до службы в домах богатых граждан.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="culture">
+        <h2>Культура и религия</h2>
+        <div class="styled-text">
+            <p>Римская культура была сильно влиятельна и распространилась на многие территории, завоеванные римлянами. Римляне заимствовали много элементов из греческой культуры, включая богов и искусство. Религия играла важную роль в жизни римлян, и Понтифекс Максимус был главой религиозного культа.</p>
+            <p>Римская архитектура включала в себя монументальные постройки, такие как Колизей и Пантеон, которые демонстрировали величие империи. Технологии строительства, такие как бетон и арки, позволяли римлянам возводить сложные и долговечные сооружения.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="law">
+        <h2>Система права</h2>
+        <p style="color: #2bb9a0; font-size: 16px; text-align: left;">Римское право было одним из важнейших наследий Римской империи. Оно заложило основы для многих современных правовых систем. Примером римского правового документа может служить Кодекс Юстиниана, который стал образцом для правовых кодексов в будущем.</p>
+    </section>
+
+    <hr>
+
+    <section id="classes">
+        <h2>Экономические и социальные классы</h2>
+        <table id="classesTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0, 'classesTable')">Класс</th>
+                    <th onclick="sortTable(1, 'classesTable')">Экономическая роль</th>
+                    <th onclick="sortTable(2, 'classesTable')">Социальный статус</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Патриции</td>
+                    <td>Землевладельцы, крупные бизнесмены</td>
+                    <td>Высший класс</td>
+                </tr>
+                <tr>
+                    <td>Плебеи</td>
+                    <td>Ремесленники, торговцы</td>
+                    <td>Средний класс</td>
+                </tr>
+                <tr>
+                    <td>Рабы</td>
+                    <td>Труд на полях, в домах</td>
+                    <td>Низший класс</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+	<li><a href="bom-rome.html">Интерактивная страница: BOM и Рим</a></li>
+    <section id="emperors">
+        <h2>Основные римские императоры</h2>
+        <button id="sortButton">Сортировать список императоров</button>
+        <ul id="emperorsList">
+            <li>Император Август (Октавиан) — 27 до н.э. – 14 н.э.</li>
+            <li>Император Тиберий — 14 – 37 н.э.</li>
+            <li>Император Калигула — 37 – 41 н.э.</li>
+            <li>Император Клавдий — 41 – 54 н.э.</li>
+            <li>Император Нерон — 54 – 68 н.э.</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <h2>Устройство Римской Армии в I веке</h2>
+    <section id="army" class="army">
+        <table id="armyTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0, 'armyTable')">Подразделение</th>
+                    <th onclick="sortTable(1, 'armyTable')">Описание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Легион</td>
+                    <td>Основная боеспособная единица, состоящая из 4800–6000 солдат.</td>
+                </tr>
+                <tr>
+                    <td>Кавалерия</td>
+                    <td>Подразделение на конях, выполнявшее вспомогательные и разведывательные функции.</td>
+                </tr>
+                <tr>
+                    <td>Когорты</td>
+                    <td>Подразделения внутри легиона, состоящие из 480 солдат.</td>
+                </tr>
+                <tr>
+                    <td>Век (вековая единица)</td>
+                    <td>Состоит из 80–100 солдат; две века формировали манипулу.</td>
+                </tr>
+                <tr>
+                    <td>Сигнаторы</td>
+                    <td>Офицеры, ответственные за подачу сигналов во время битвы.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- Секция о строительстве дорог -->
+<section id="roman-roads">
+    <h2>Строительство римских дорог</h2>
+    <p id="road-fact">Римские дороги были построены с использованием многослойной конструкции, которая делала их долговечными.</p>
+    <button id="change-road-fact-btn">Узнать больше</button>
+</section>
+
+<!-- Секция о римских акведуках -->
+<section id="roman-aqueducts">
+    <h2>Римские акведуки</h2>
+    <p id="aqueduct-fact">Римляне построили более 11 крупных акведуков, которые снабжали водой Рим.</p>
+    <button id="add-aqueduct-btn">Добавить новый факт</button>
+    <ul id="aqueduct-list">
+        <li>Акведук Aqua Appia, построенный в 312 г. до н.э.</li>
+        <li>Акведук Aqua Marcia, построенный в 144 г. до н.э.</li>
+    </ul>
+</section>
+
+<!-- Секция с изображением армии -->
+<section id="army-display">
+    <h2>Изображение римской армии</h2>
+    <img id="army-image" src="https://digitalmapsoftheancientworld.com/wp-content/uploads/2022/05/roman_army.jpg" alt="Римская армия" width="300">
+    <button id="toggle-army-img-btn">Скрыть/показать изображение</button>
+</section>
+<!-- Секция: Таблица римских сооружений -->
+<section id="roman-buildings">
+    <h2>Известные сооружения Римской империи</h2>
+    <input type="text" id="building-search" placeholder="Введите название сооружения...">
+    <table id="buildings-table">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Год постройки</th>
+                <th>Назначение</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Колизей</td>
+                <td>80 н.э.</td>
+                <td>Амфитеатр для гладиаторских боёв</td>
+            </tr>
+            <tr>
+                <td>Пантеон</td>
+                <td>126 н.э.</td>
+                <td>Храм для всех богов</td>
+            </tr>
+            <tr>
+                <td>Акведук Aqua Appia</td>
+                <td>312 до н.э.</td>
+                <td>Доставка воды</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Секция: Слайдер римских культурных достижений -->
+<section id="roman-culture-slider">
+    <h2>Культурные достижения Римской империи</h2>
+    <div class="owl-carousel">
+        <div class="item">
+            <img src="https://static.tildacdn.com/tild3562-3836-4335-b461-373432306239/34-02.jpg" alt="Римская мозаика">
+            <p>Римская мозаика: искусство, украшающее дома богатых римлян.</p>
+        </div>
+        <div class="item">
+            <img src="https://masterpiecer-images.s3.yandex.net/33590f46a16111ee84f7fe19746b188b:upscaled" alt="Римская статуя">
+            <p>Римские статуи: реалистичные скульптуры, вдохновленные греческим искусством.</p>
+        </div>
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ZGu2EaOXxSx5ICveuD0fRiqRimxWpwqHhw&s" alt="Римские монеты">
+            <p>Римские монеты: символы власти и экономической стабильности.</p>
+        </div>
+        <div class="item">
+            <img src="https://cs14.pikabu.ru/post_img/big/2021/12/01/3/1638330390122297454.jpg" alt="Римские гладиаторы">
+            <p>Гладиаторские бои: популярное развлечение в Римской империи.</p>
+        </div>
+    </div>
+</section>
+
+</section>
+<section id="info-toggle-section">
+    <h2>Информация о римской культуре</h2>
+    <button @click="toggleInfo">Показать/Скрыть информацию</button>
+    <div v-if="isInfoVisible" class="additional-info">
+        <p>
+            Римская культура оказывала влияние на архитектуру, искусство, и философию многих цивилизаций. 
+            Основные достижения включают мозаики, скульптуры и величественные здания, такие как Колизей.
+        </p>
+        <p>
+            Литература и театр также играли важную роль в повседневной жизни римлян, отражая их философские взгляды.
+        </p>
+
+<section id="dynamic-title">
+    <h2>Измените заголовок страницы</h2>
+    <input type="text" v-model="pageTitle" placeholder="Введите новый заголовок..." />
+     <p>Текущий заголовок: <strong>{{ pageTitle }}</strong></p>
+</section>
+        
+    </div>
+</section>
+    <footer>
+        <div style="position: relative; top: 20px;">
+            
+			<a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%80%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D1%85_%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2" class="hover-link">Подробности</a>
+        </div>
+		
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
